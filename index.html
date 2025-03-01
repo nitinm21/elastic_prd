@@ -30,7 +30,8 @@
     <div id="markdown-content"></div>
 
     <script>
-        const markdownText = `
+        document.addEventListener("DOMContentLoaded", function () {
+            const markdownText = `
 
 ## What are we doing?
 
@@ -75,7 +76,8 @@ Here’s the plan to build this:
     - **No Year:** If they only want to share month and day (e.g., “March 15”), allow that and just skip the year in the display.
 `;
 
-        document.getElementById('markdown-content').innerHTML = marked.parse(markdownText);
+            document.getElementById('markdown-content').innerHTML = marked.parse(markdownText);
+        });
     </script>
 
 </body>
